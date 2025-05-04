@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  recommendation-system:
+    build: .
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python knn.py 
